@@ -10,8 +10,8 @@
         let colorC = color('rgb(51,243,243)');
         let colorD = color('rgb(225,32,255)');
         
-        this.color = lerpColor(colorA, colorB, random(100)/100);
-        this.lineColor = lerpColor(colorC, colorD, random(40)/100);
+        this.color = lerpColor(colorA, colorB, random(.1));
+        this.lineColor = lerpColor(colorC, colorD, random(1));
         this.color.setAlpha(random(.1));
         this.lineColor.setAlpha(random(.1));
     }
