@@ -5,20 +5,19 @@
         this.r = random(2,5);
         this.xSpeed = random(1,2);
         this.ySpeed = random(1,1.5);
-        let colorB = color('rgb(255,0,0)');
+        let colorB = color('rgb(255,255,255)');
         let colorA = color('rgb(0,101,255)');
-        let colorC = color('rgb(5,196,236)');
-        let colorD = color('rgb(27,40,75)');
+        let colorC = color('rgb(51,243,243)');
+        let colorD = color('rgb(225,32,255)');
         
         this.color = lerpColor(colorA, colorB, random(100)/100);
         this.lineColor = lerpColor(colorC, colorD, random(40)/100);
-        this.color.setAlpha(random(100)/100);
-        this.lineColor.setAlpha(random(100)/100);
+        this.color.setAlpha(random(.1));
+        this.lineColor.setAlpha(random(.1));
     }
 
 // creation of a particle.
     createParticle() {
-        noStroke();
         fill(this.color);
         circle(this.x,this.y,this.r);
     }
@@ -58,7 +57,7 @@
 // an array to add multiple particles
 let particles = [];
 const noiseScale = 0.01/4;
-particleCount = 500
+particleCount = 250
 function setup() {
     colorMode(HSB);
     createCanvas(windowWidth, windowHeight);
